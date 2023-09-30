@@ -1,0 +1,262 @@
+body,
+h1 {
+  margin: 0;
+  padding: 2rem;
+}
+
+h1 {
+  font-family: "Rammetto One";
+  color: #022f40;
+}
+
+img {
+  height: 12%;
+  width: 12%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(246, 237, 234);
+  color: #022f40;
+}
+
+header {
+  background-color: #f8edea;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  /* margin-top: 5%; */
+}
+
+main {
+  width: 80%;
+  margin: 2rem auto;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+.main-area {
+  background-color: #ced3dc;
+  border-radius: 50px;
+  box-shadow: 20px 20px 60px #c1b1be, -20px -20px 60px #ffdfd5;
+}
+
+.main-text {
+  text-align: center;
+}
+
+h1 {
+  font-size: 70px;
+  margin-bottom: 0.5rem;
+}
+
+form {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+/* label {
+  display: in-block; 
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 20px;
+  padding-right: 2rem;
+} */
+
+.restaurantForm {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.restaurantForm .choices {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.restaurantForm select {
+  width: auto;
+  padding: 1rem;
+  margin: 1rem 1rem 1rem 0;
+}
+
+.choices {
+  /* display: flex;
+  flex-wrap: nowrap; */
+  flex-direction: row;
+}
+
+select {
+  width: 16%;
+  padding: 2.5rem;
+  margin: 1rem 1.5rem 1rem 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 19px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  appearance: none;
+  font-weight: 500;
+  text-align: center;
+}
+
+select .btn-primary {
+  background-color: white;
+}
+
+.center {
+  width: 15%;
+  margin: auto;
+}
+
+button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #022f40;
+  font-family: "Rammetto One";
+  font-size: 9px;
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border: none;
+}
+
+button:after {
+  content: " ";
+  width: 0%;
+  height: 100%;
+  background: #f9f4f2;
+  position: absolute;
+  transition: all 0.4s ease-in-out;
+  right: 0;
+}
+
+button:hover::after {
+  right: auto;
+  left: 0;
+  width: 100%;
+}
+
+button span {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  padding: 18px 25px;
+  color: rgb(246, 237, 234);
+  font-size: 1.5em;
+  font-weight: 500;
+  z-index: 20;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover span {
+  color: #022f40;
+  animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+#restaurant-list {
+  margin-top: 2rem;
+}
+
+#restaurant-list div {
+  border-bottom: 1px solid #eee;
+  padding: 1rem 0;
+}
+
+#restaurant-list h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+#restaurant-list p {
+  margin-bottom: 0.5rem;
+}
+/* Style each individual meal type item */
+.meal-type-item {
+  background-color: #eee;
+  color: #022f40;
+  padding: 5px 10px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+/* Style each restaurant container */
+.restaurant-container {
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+/* 
+***********************************************
+MOBILE
+***********************************************
+*/
+
+@media (max-width: 767px) {
+  body {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .main-area {
+    width: 100%;
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Modify the layout of the form for mobile */
+  .restaurantForm {
+    flex-direction: column;
+  }
+
+  .restaurantForm .choices {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  select {
+    width: 100%;
+    margin: 0;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+  }
+
+  button span {
+    padding: 12px 20px;
+    font-size: 1em;
+  }
+
+  /* Style the restaurant listings for mobile */
+  #restaurant-list div {
+    padding: 0.5rem 0;
+  }
+}
